@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">tarea 3-4</string>
+    <string name="petgram">Petgram</string>
+    <string name="about">Acerca de</string>
+    <string name="contact">Contacto</string>
+    <string name="transitionName_picture">pictureTransition</string>
+    <string name="name_pet">Nombre</string>
+    <string name="num_rating">5</string>
+    <string name="tittle_button_home">Home</string>
+    <string name="tittle_button_profile">Profile</string>
+    <string name="name_contact">Nombre</string>
+    <string name="date">Fecha</string>
+    <string name="phone">Telefono</string>
+    <string name="mail">Email</string>
+    <string name="contact_message">Mensaje</string>
+    <string name="send">Enviar</string>
+    <string name="text_profile">"Juanito Laguna nace a finales de los años 50 en uno de los barrios más miserables del arrabal bonaerense. Hijo de un peón de la metalurgia, Juanito crece entre la pobreza del bañado de Flores, mientras juega en las calles, aprende a leer o celebra la Navidad, intuyendo por ahí fuera otro mundo lleno de esperanza. Ramona Montiel es también de barrio porteño, el de Pompeya. Joven y bonita, Ramona sobrevive a base de coser. Sin embargo, ella no se conforma con su destino; por ello se deja seducir por los lujos, la imaginación y las falsas promesas de una “vida mejor” hasta convertirse en la amante protegida de un poderoso círculo de amigos influyentes: un general, un marinero, un criminal, un embajador, un obispo. Ramona y Juanito, aunque representan la realidad más misérrima de su tiempo, de una gran ciudad (Buenos Aires), son personajes de ficción nacidos del arte y los pinceles de Antonio Berni (Rosario, 1905-Buenos Aires, 1981), el gran exponente de la pintura narrativa de su país. Juanito es un chico pobre, pero no un pobre chico, escribe Berni, uno de los personajes más entrañables del espectro social latinoamericano de su época. Ramona, sin embargo, es su contraparte femenina, una chica de arrabal, como surgida de una letra de tango, a través de la cual el artista sondea las diferentes presiones sociales que recaen sobre la mujer. A lo largo de dos décadas Berni imagina, dibuja, pinta, ensambla la personalidad, la dureza de la vida, la evolución de sus dos criaturas en diferentes series que plasman ambientes miserables, diferencias sociales, basureros ideológicos que denuncian y golpean conciencias, tanto dentro como fuera de su país natal. "</string>
+</resources>

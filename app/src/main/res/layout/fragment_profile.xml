@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".view.fragment.ProfileFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.PopupOverlay"
+        android:background="@android:color/white">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:statusBarScrim="@color/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="@dimen/margin_horizontal_layout_text_profile"
+                android:paddingTop="@dimen/paddingtop_layout_text_profile"
+                android:paddingBottom="@dimen/padingbottom_layout_text_profile"
+                android:layout_gravity="center|top"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/name_pet_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name_pet"
+                    android:layout_gravity="center"
+                    android:textSize="20sp"/>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_profile"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/white"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyvlerView_profile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:paddingHorizontal="@dimen/padding_recyclerview_profile"
+        android:paddingTop="@dimen/padding_recyclerview_profile"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="@dimen/size_circle_image"
+        android:layout_height="@dimen/size_circle_image"
+        android:src="@drawable/ic_profile"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="@dimen/margintop_circle_imageview"
+        android:elevation="@dimen/elevation_circle_imageview"
+        app:layout_behavior="com.zoonref.SimpleViewBehavior"
+        app:dependsOn="@id/appbar_profile"
+        app:dependType="y"
+        app:dependTargetY="@dimen/depend_size_moving_image"
+        app:targetX="@dimen/final_position_image_X"
+        app:targetY="@dimen/final_position_image_Y"
+        app:targetWidth="@dimen/size_final_moving_image"
+        app:targetHeight="@dimen/size_final_moving_image"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

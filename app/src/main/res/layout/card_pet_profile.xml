@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/picture_cardview_profile"
+    android:layout_width="@dimen/size_card_pet_profile"
+    android:layout_height="@dimen/size_card_pet_profile"
+    android:layout_marginHorizontal="@dimen/padding_bettew_cards_profile">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <ImageView
+            android:id="@+id/image_cardview_profile"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_image_cardview_profile"
+            android:scaleType="centerCrop"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_container_data_cardview_profile"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/raiting_number_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/num_rating"
+                android:layout_gravity="center"
+                android:paddingLeft="@dimen/paddingleft_reiting_number_cardview_profile"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:layout_width="@dimen/size_bonecolor_Cardview_profile"
+                android:layout_height="@dimen/size_bonecolor_Cardview_profile"
+                android:layout_gravity="center"
+                android:src="@drawable/bone_color"
+                android:layout_marginLeft="@dimen/marginleft_bettew_bone_and_text"/>
+
+        </LinearLayout>
+        
+    </FrameLayout>
+
+</androidx.cardview.widget.CardView>
