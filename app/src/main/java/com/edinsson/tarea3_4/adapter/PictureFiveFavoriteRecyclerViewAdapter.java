@@ -15,7 +15,7 @@ import com.squareup.picasso.Picasso;
 
 public class PictureFiveFavoriteRecyclerViewAdapter extends RecyclerView.Adapter<PictureFiveFavoriteRecyclerViewAdapter.ViewHolder> {
 
-    private CardViewMain [] pictures = new CardViewMain[5];
+    private CardViewMain [] pictures;
     private int resource;
 
     public PictureFiveFavoriteRecyclerViewAdapter(CardViewMain[] pictures, int resource) {

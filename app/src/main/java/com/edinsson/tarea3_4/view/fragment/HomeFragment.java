@@ -18,27 +18,21 @@ import com.edinsson.tarea3_4.modelo.CardViewMain;
 
 import java.util.ArrayList;
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements IHomeFragment{
+
+    RecyclerView recyclerView;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview_home);
-
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
-        linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-
-        recyclerView.setLayoutManager(linearLayoutManager);
-
-        PictureMainRecyclerViewAdapter pictureMainRecyclerViewAdapter = new PictureMainRecyclerViewAdapter(buidPicture(), R.layout.card_pet_main);
-        recyclerView.setAdapter(pictureMainRecyclerViewAdapter);
+        recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview_home);
 
         return view;
     }
 
-    public ArrayList<CardViewMain> buidPicture(){
+    /*public ArrayList<CardViewMain> buidPicture(){
         ArrayList<CardViewMain> pictures = new ArrayList<CardViewMain>();
         pictures.add(new CardViewMain("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/22c25b0c-a2e2-4140-a38b-010b64" +
                 "97b70f/ddqdgld-50c92e92-3d9a-4284-b30c-7efb7354e8dc.png/v1/fill/w_1024,h_640,q_80,strp/metro_ranger_by_2078_ddqdgld-fu" +
@@ -88,5 +82,18 @@ public class HomeFragment extends Fragment {
                 "Fesx1DBU8oBI", "Yolo",  "15"));
 
         return pictures;
+    }*/
+
+    @Override
+    public void generarLinearLayoutVertical() {
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+        linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        recyclerView.setLayoutManager(linearLayoutManager);
+    }
+
+    @Override
+    public void generarAdaptadorRecyclerView(ArrayList<CardViewMain> usuarios) {
+        PictureMainRecyclerViewAdapter pictureMainRecyclerViewAdapter = new PictureMainRecyclerViewAdapter(usuarios, R.layout.card_pet_main);
+        recyclerView.setAdapter(pictureMainRecyclerViewAdapter);
     }
 }

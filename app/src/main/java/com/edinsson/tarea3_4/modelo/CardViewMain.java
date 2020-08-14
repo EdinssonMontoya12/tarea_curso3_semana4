@@ -2,6 +2,7 @@ package com.edinsson.tarea3_4.modelo;
 
 public class CardViewMain {
 
+    private String id;
     private String picture;
     private String name;
     private String raitingNumber;
@@ -36,4 +37,11 @@ public class CardViewMain {
         this.raitingNumber = likenumber;
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 }
