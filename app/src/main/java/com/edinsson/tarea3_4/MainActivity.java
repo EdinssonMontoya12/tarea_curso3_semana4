@@ -23,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //Esto es una prueba
+
         setContentView(R.layout.activity_main);
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.buttons_navigation);
