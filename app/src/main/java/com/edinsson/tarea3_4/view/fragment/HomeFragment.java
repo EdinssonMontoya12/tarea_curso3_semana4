@@ -97,7 +97,7 @@ public class HomeFragment extends Fragment implements IHomeFragment{
 
     @Override
     public void generarAdaptadorRecyclerView(ArrayList<CardViewMain> usuarios) {
-        PictureMainRecyclerViewAdapter pictureMainRecyclerViewAdapter = new PictureMainRecyclerViewAdapter(usuarios, R.layout.card_pet_main);
+        PictureMainRecyclerViewAdapter pictureMainRecyclerViewAdapter = new PictureMainRecyclerViewAdapter(usuarios, R.layout.card_pet_main, getActivity());
         recyclerView.setAdapter(pictureMainRecyclerViewAdapter);
     }
 }

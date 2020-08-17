@@ -63,7 +63,7 @@
         android:paddingHorizontal="@dimen/padding_recyclerview_profile"
         android:paddingTop="@dimen/padding_recyclerview_profile"/>
 
-    <de.hdodenhof.circleimageview.CircleImageView
+    <ImageView
         android:layout_width="@dimen/size_circle_image"
         android:layout_height="@dimen/size_circle_image"
         android:src="@drawable/ic_profile"

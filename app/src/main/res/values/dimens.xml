@@ -4,7 +4,7 @@
     <dimen name="tittle_appbar_petgram">30sp</dimen>
     <dimen name="vertical_appbar">55dp</dimen>
     <dimen name="marginleft_text_appbar">90dp</dimen>
-    <dimen name="marginleft_image_star_appbar">85dp</dimen>
+    <dimen name="marginleft_image_star_appbar">70dp</dimen>
     <dimen name="marginleft_pawog_appbar">20dp</dimen>
     <dimen name="cardview_vertical_dimen">400dp</dimen>
     <dimen name="padding_info_cardview">60dp</dimen>
