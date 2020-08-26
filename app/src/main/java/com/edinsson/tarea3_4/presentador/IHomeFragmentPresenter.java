@@ -4,5 +4,7 @@ public interface IHomeFragmentPresenter {
 
     public void obtenerContactosBaseDatos();
 
+    public void obtenerAllMediaInfo();
+
     public void mostrarContactosRecyclerView();
 }

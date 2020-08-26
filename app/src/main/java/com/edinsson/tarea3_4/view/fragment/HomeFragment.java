@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -90,14 +91,13 @@ public class HomeFragment extends Fragment implements IHomeFragment{
 
     @Override
     public void generarLinearLayoutVertical() {
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
-        linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-        recyclerView.setLayoutManager(linearLayoutManager);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2);
+        recyclerView.setLayoutManager(gridLayoutManager);
     }
 
     @Override
     public void generarAdaptadorRecyclerView(ArrayList<CardViewMain> usuarios) {
-        PictureMainRecyclerViewAdapter pictureMainRecyclerViewAdapter = new PictureMainRecyclerViewAdapter(usuarios, R.layout.card_pet_main, getActivity());
+        PictureMainRecyclerViewAdapter pictureMainRecyclerViewAdapter = new PictureMainRecyclerViewAdapter(usuarios, R.layout.card_pet_instagram_api, getActivity());
         recyclerView.setAdapter(pictureMainRecyclerViewAdapter);
     }
 }

@@ -1,12 +1,22 @@
 package com.edinsson.tarea3_4.presentador;
 
 import android.content.Context;
+import android.util.Log;
+import android.widget.Toast;
 
 import com.edinsson.tarea3_4.db.ConstructorCardViewMain;
 import com.edinsson.tarea3_4.modelo.CardViewMain;
+import com.edinsson.tarea3_4.restApi.IMethodsApi;
+import com.edinsson.tarea3_4.restApi.adapter.RestApiAdapter;
+import com.edinsson.tarea3_4.restApi.modelo.CardViewReply;
 import com.edinsson.tarea3_4.view.fragment.IHomeFragment;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class HomeFragmentPresenter implements IHomeFragmentPresenter{
 
@@ -18,7 +28,8 @@ public class HomeFragmentPresenter implements IHomeFragmentPresenter{
     public HomeFragmentPresenter(IHomeFragment iHomeFragment, Context context) {
         this.iHomeFragment = iHomeFragment;
         this.context = context;
-        obtenerContactosBaseDatos();
+        //obtenerContactosBaseDatos();
+        obtenerAllMediaInfo();
     }
 
     @Override
@@ -26,6 +37,29 @@ public class HomeFragmentPresenter implements IHomeFragmentPresenter{
         constructorCardViewMain = new ConstructorCardViewMain(context);
         cardViewMains = constructorCardViewMain.obtenerDatos();
         mostrarContactosRecyclerView();
+    }
+
+    @Override
+    public void obtenerAllMediaInfo() {
+        RestApiAdapter restApiAdapter = new RestApiAdapter();
+        Gson gson = restApiAdapter.contruyeGsonDeserializadorMedia();
+        IMethodsApi iMethodsApi = restApiAdapter.establecerConexionRestApiInstagram(gson);
+        Call<CardViewReply> cardViewReplyCall = iMethodsApi.getAllMediaInfo();
+
+        cardViewReplyCall.enqueue(new Callback<CardViewReply>() {
+            @Override
+            public void onResponse(Call<CardViewReply> call, Response<CardViewReply> response) {
+                CardViewReply cardViewReply = response.body();
+                cardViewMains = cardViewReply.getCardViews();
+                mostrarContactosRecyclerView();
+            }
+
+            @Override
+            public void onFailure(Call<CardViewReply> call, Throwable t) {
+                Toast.makeText(context, "Algo falló", Toast.LENGTH_SHORT).show();
+                Log.e("Falló la conexion", t.toString());
+            }
+        });
     }
 
     @Override

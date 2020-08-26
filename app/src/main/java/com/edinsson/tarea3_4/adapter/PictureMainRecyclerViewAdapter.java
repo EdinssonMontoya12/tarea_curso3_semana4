@@ -42,13 +42,13 @@ public class PictureMainRecyclerViewAdapter extends RecyclerView.Adapter<Picture
 
     @Override
     public void onBindViewHolder(@NonNull final PictureViewHolder holder, int position) {
-        ConstructorCardViewMain constructorCardViewMain = new ConstructorCardViewMain(activity);
+        //ConstructorCardViewMain constructorCardViewMain = new ConstructorCardViewMain(activity);
         final CardViewMain cardViewMain = pictures.get(position);
-        holder.name.setText(cardViewMain.getName());
-        holder.numRaiting.setText(String.valueOf(constructorCardViewMain.obtenerLikePublisher(cardViewMain)));
+        //holder.name.setText(cardViewMain.getName());
+        holder.username.setText(cardViewMain.getName());
         Picasso.get().load(cardViewMain.getPicture()).into(holder.imageView);
 
-        holder.raiting.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        /*holder.raiting.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 ConstructorCardViewMain constructorCardViewMain = new ConstructorCardViewMain(activity);
@@ -58,7 +58,7 @@ public class PictureMainRecyclerViewAdapter extends RecyclerView.Adapter<Picture
                 }
                 holder.numRaiting.setText(String.valueOf(constructorCardViewMain.obtenerLikePublisher(cardViewMain)));
             }
-        });
+        });*/
     }
 
     @Override
@@ -69,17 +69,17 @@ public class PictureMainRecyclerViewAdapter extends RecyclerView.Adapter<Picture
     public class PictureViewHolder extends RecyclerView.ViewHolder {
 
         private ImageView imageView;
-        private TextView name;
-        private TextView numRaiting;
-        private CheckBox raiting;
+        //private TextView name;
+        private TextView username;
+        //private CheckBox raiting;
 
         public PictureViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            imageView = (ImageView) itemView.findViewById(R.id.image_cardview);
-            name = (TextView) itemView.findViewById(R.id.name_pet);
-            numRaiting = (TextView) itemView.findViewById(R.id.num_rating);
-            raiting = (CheckBox) itemView.findViewById(R.id.selector_raiting);
+            imageView = (ImageView) itemView.findViewById(R.id.image_cardview_instagram);
+            //name = (TextView) itemView.findViewById(R.id.name_pet);
+            username = (TextView) itemView.findViewById(R.id.username_instagram);
+            //raiting = (CheckBox) itemView.findViewById(R.id.selector_raiting);
         }
     }
 

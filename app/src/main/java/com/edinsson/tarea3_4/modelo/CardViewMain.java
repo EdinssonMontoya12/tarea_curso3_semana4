@@ -5,15 +5,15 @@ public class CardViewMain {
     private int id;
     private String picture;
     private String name;
-    private int raitingNumber;
+    //private int raitingNumber;
 
     public CardViewMain() {
     }
 
-    public CardViewMain(String picture, String name, int likenumber) {
+    public CardViewMain(String picture, String name) {
         this.picture = picture;
         this.name = name;
-        this.raitingNumber = likenumber;
+        //this.raitingNumber = likenumber;
     }
 
     public String getPicture() {
@@ -32,13 +32,13 @@ public class CardViewMain {
         this.name = name;
     }
 
-    public int getRaitingNumber() {
+    /*public int getRaitingNumber() {
         return raitingNumber;
-    }
+    }*/
 
-    public void setRaitingNumber(int likenumber) {
+    /*public void setRaitingNumber(int likenumber) {
         this.raitingNumber = likenumber;
-    }
+    }*/
 
     public int getId() {
         return id;
