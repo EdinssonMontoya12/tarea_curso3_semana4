@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    tools:context=".view.AccountSettingsActivity">
+
+    <include layout="@layout/toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PetGram"
+            android:textStyle="bold|italic"
+            android:layout_gravity="center_horizontal"
+            android:textSize="50dp"
+            android:layout_marginTop="70dp"/>
+
+        <Spinner
+            android:id="@+id/usuario_selected"
+            android:layout_height="wrap_content"
+            android:layout_width="360dp"
+            android:paddingHorizontal="10dp"
+            android:layout_marginTop="100dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <Button
+            android:id="@+id/guardar_cuenta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/RisedButton"
+            android:text="@string/send"
+            android:layout_marginTop="100dp"
+            android:onClick="guardarCuenta"/>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

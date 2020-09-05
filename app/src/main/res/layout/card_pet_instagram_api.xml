@@ -27,14 +27,24 @@
 
             <TextView
                 android:id="@+id/username_instagram"
-                android:layout_width="wrap_content"
+                android:layout_width="115dp"
                 android:layout_height="27dp"
                 android:layout_centerInParent="true"
                 android:text="nombre"
                 android:textSize="15dp"
                 android:paddingTop="3dp"
                 android:textStyle="bold"
-                android:textColor="@android:color/black"/>
+                android:textColor="@android:color/black"
+                android:lines="1"/>
+
+            <CheckBox
+                android:id="@+id/raiting_click"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf= "@id/username_instagram"
+                android:button="@drawable/selector_raiting"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="5dp"/>
 
         </RelativeLayout>
 

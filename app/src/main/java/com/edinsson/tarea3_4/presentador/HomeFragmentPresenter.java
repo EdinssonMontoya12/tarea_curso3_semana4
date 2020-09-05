@@ -1,6 +1,7 @@
 package com.edinsson.tarea3_4.presentador;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -44,7 +45,13 @@ public class HomeFragmentPresenter implements IHomeFragmentPresenter{
         RestApiAdapter restApiAdapter = new RestApiAdapter();
         Gson gson = restApiAdapter.contruyeGsonDeserializadorMedia();
         IMethodsApi iMethodsApi = restApiAdapter.establecerConexionRestApiInstagram(gson);
-        Call<CardViewReply> cardViewReplyCall = iMethodsApi.getAllMediaInfo();
+        SharedPreferences data = context.getSharedPreferences("usuario", context.MODE_PRIVATE);
+        Call<CardViewReply> cardViewReplyCall;
+        if(data.getString("nombre_usuario", "").equals("Pepe")) {
+            cardViewReplyCall = iMethodsApi.getAllMediaInfo();
+        }else{
+            cardViewReplyCall = iMethodsApi.getAllMediaInfoJuan();
+        }
 
         cardViewReplyCall.enqueue(new Callback<CardViewReply>() {
             @Override

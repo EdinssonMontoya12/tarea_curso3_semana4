@@ -48,17 +48,18 @@ public class PictureMainRecyclerViewAdapter extends RecyclerView.Adapter<Picture
         holder.username.setText(cardViewMain.getName());
         Picasso.get().load(cardViewMain.getPicture()).into(holder.imageView);
 
-        /*holder.raiting.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        holder.raiting.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                ConstructorCardViewMain constructorCardViewMain = new ConstructorCardViewMain(activity);
+                /*ConstructorCardViewMain constructorCardViewMain = new ConstructorCardViewMain(activity);
                 if(b) {
                     constructorCardViewMain.darLikePublisher(cardViewMain);
                     constructorCardViewMain.insertFiveFavorite(cardViewMain);
                 }
-                holder.numRaiting.setText(String.valueOf(constructorCardViewMain.obtenerLikePublisher(cardViewMain)));
+                holder.numRaiting.setText(String.valueOf(constructorCardViewMain.obtenerLikePublisher(cardViewMain)));*/
+                //En futuro envira notificación al dueño de la foto
             }
-        });*/
+        });
     }
 
     @Override
@@ -71,7 +72,7 @@ public class PictureMainRecyclerViewAdapter extends RecyclerView.Adapter<Picture
         private ImageView imageView;
         //private TextView name;
         private TextView username;
-        //private CheckBox raiting;
+        private CheckBox raiting;
 
         public PictureViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -79,7 +80,7 @@ public class PictureMainRecyclerViewAdapter extends RecyclerView.Adapter<Picture
             imageView = (ImageView) itemView.findViewById(R.id.image_cardview_instagram);
             //name = (TextView) itemView.findViewById(R.id.name_pet);
             username = (TextView) itemView.findViewById(R.id.username_instagram);
-            //raiting = (CheckBox) itemView.findViewById(R.id.selector_raiting);
+            raiting = (CheckBox) itemView.findViewById(R.id.raiting_click);
         }
     }
 

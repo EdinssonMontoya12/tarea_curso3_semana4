@@ -8,4 +8,12 @@
         android:id="@+id/about"
         android:enabled="true"
         android:title="@string/about"/>
+    <item
+        android:id="@+id/account_setting"
+        android:enabled="true"
+        android:title="Configurar cuenta"/>
+    <item
+        android:id="@+id/recived"
+        android:enabled="true"
+        android:title="Recibir notificaciones"/>
 </menu>

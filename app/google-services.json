@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "596999937189",
+    "firebase_url": "https://petsocial-3e1b1.firebaseio.com",
+    "project_id": "petsocial-3e1b1",
+    "storage_bucket": "petsocial-3e1b1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:596999937189:android:d70bd910207d4caf4a014c",
+        "android_client_info": {
+          "package_name": "com.edinsson.tarea3_4"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "596999937189-tm8lu3jenqqgos6cfquea6l4cv1uqd2n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.edinsson.tarea3_4",
+            "certificate_hash": "a792ba96675f1aa7b6919010e5b7dbfcf99121a5"
+          }
+        },
+        {
+          "client_id": "596999937189-fqka1ubg6vj038rebd2hhebdncvpgti5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKzzTstj3xa_klgjuzy9Blb97RSQNyFH4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "596999937189-fqka1ubg6vj038rebd2hhebdncvpgti5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

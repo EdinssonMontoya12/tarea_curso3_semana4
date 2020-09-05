@@ -30,17 +30,17 @@
                 android:paddingTop="@dimen/padding_top_form">
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:layout_height="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:theme="@style/EditText">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/name_contact"
                     android:layout_width="match_parent"
-                    android:theme="@style/EditText">
+                    android:layout_height="wrap_content"
+                    android:hint="@string/name_contact"/>
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/name_contact"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/name_contact"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_height="wrap_content"
