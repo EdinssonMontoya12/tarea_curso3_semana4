@@ -4,5 +4,6 @@ public class ConstantesRestAPINode {
 
     public static final String ROOT_URL = "https://young-temple-47701.herokuapp.com";
     public static final String KEY_POST_ID_TOKEN = "/token-device";
+    public static final String KEY_LIKE = "/toque-foto/{id_account}/{id_account_like}/";
 
 }

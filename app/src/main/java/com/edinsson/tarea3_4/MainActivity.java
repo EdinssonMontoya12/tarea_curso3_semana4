@@ -173,7 +173,6 @@ public class MainActivity extends AppCompatActivity {
                 public void onResponse(Call<Usuario> call, Response<Usuario> response) {
                     Usuario usuario = response.body();
 
-                    Log.d("FIREBASE_ID", usuario.getId());
                     Log.d("ID_COUNT", usuario.getIdCount());
                     Log.d("DEVICE_TOKEN", usuario.getToken());
                 }

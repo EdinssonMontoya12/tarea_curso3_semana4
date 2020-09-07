@@ -1,6 +1,8 @@
 package com.edinsson.tarea3_4.adapter;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,10 +18,17 @@ import com.edinsson.tarea3_4.R;
 import com.edinsson.tarea3_4.db.ConstantesBaseDatos;
 import com.edinsson.tarea3_4.db.ConstructorCardViewMain;
 import com.edinsson.tarea3_4.modelo.CardViewMain;
+import com.edinsson.tarea3_4.restApi.EndPointNode;
+import com.edinsson.tarea3_4.restApi.adapter.RestApiAdapterNode;
+import com.edinsson.tarea3_4.restApi.modelo.Usuario;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.Objects;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class PictureMainRecyclerViewAdapter extends RecyclerView.Adapter<PictureMainRecyclerViewAdapter.PictureViewHolder> {
 
@@ -51,13 +60,27 @@ public class PictureMainRecyclerViewAdapter extends RecyclerView.Adapter<Picture
         holder.raiting.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                /*ConstructorCardViewMain constructorCardViewMain = new ConstructorCardViewMain(activity);
+                //ConstructorCardViewMain constructorCardViewMain = new ConstructorCardViewMain(activity);
                 if(b) {
-                    constructorCardViewMain.darLikePublisher(cardViewMain);
-                    constructorCardViewMain.insertFiveFavorite(cardViewMain);
+                    RestApiAdapterNode restApiAdapterNode = new RestApiAdapterNode();
+                    EndPointNode endPointNode = restApiAdapterNode.establecerConexionRestAPI();
+                    SharedPreferences sharedPreferences = activity.getSharedPreferences("usuario", activity.MODE_PRIVATE);
+                    Call<Usuario> usuarioCall = endPointNode.like(cardViewMain.getName(), sharedPreferences.getString("nombre_usuario", ""));
+
+                    usuarioCall.enqueue(new Callback<Usuario>() {
+                        @Override
+                        public void onResponse(Call<Usuario> call, Response<Usuario> response) {
+                            Usuario usuario = response.body();
+
+                            Log.d("ID_USER", usuario.getIdCount());
+                        }
+
+                        @Override
+                        public void onFailure(Call<Usuario> call, Throwable t) {
+
+                        }
+                    });
                 }
-                holder.numRaiting.setText(String.valueOf(constructorCardViewMain.obtenerLikePublisher(cardViewMain)));*/
-                //En futuro envira notificación al dueño de la foto
             }
         });
     }

@@ -47,10 +47,10 @@ public class HomeFragmentPresenter implements IHomeFragmentPresenter{
         IMethodsApi iMethodsApi = restApiAdapter.establecerConexionRestApiInstagram(gson);
         SharedPreferences data = context.getSharedPreferences("usuario", context.MODE_PRIVATE);
         Call<CardViewReply> cardViewReplyCall;
-        if(data.getString("nombre_usuario", "").equals("Pepe")) {
-            cardViewReplyCall = iMethodsApi.getAllMediaInfo();
-        }else{
+        if(data.getString("nombre_usuario", "").equals("pepe58632145975224")) {
             cardViewReplyCall = iMethodsApi.getAllMediaInfoJuan();
+        }else{
+            cardViewReplyCall = iMethodsApi.getAllMediaInfo();
         }
 
         cardViewReplyCall.enqueue(new Callback<CardViewReply>() {
